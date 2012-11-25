@@ -1,15 +1,15 @@
 <resources>
 
     <string name="app_name">Stay at Home</string>
-    <string name="hello_world">Hello worlds!</string>
+    <string name="hello_world">Welcome~~</string>
     <string name="menu_settings">设置</string>
     <string name="title_activity_main">Stay at Home</string>
-	<string name="main_title">Tetee</string>
+	<string name="main_title">获取数据</string>
 	<string name="dataGetButton">dataGetButton</string>
 
 	<string name="about_text">afaslkfjsalfjaslkfjasl;fjkl;vksjziosyweoitw</string>
 	<string name="about_title">test for new about</string>
-	<string name="about_button">test for about button</string>
+	<string name="about_button">About</string>
 	
 	<string name="settings_lable">设置</string>
 	
@@ -24,5 +24,7 @@
     <string name="led_on">LED On</string>
     <string name="led_off">LED Off</string>
     <string name="ToggleButton">ToggleButton</string>
-    <string name="viewTemp_title">View Temp</string>
+    <string name="viewTemp_title">查看温度</string>
+    
+    <string name="tem_title">当前状态</string>
 </resources>

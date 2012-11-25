@@ -155,9 +155,7 @@ public class dataActivity extends Activity {
 	}
  
 	public void blinkLED(View v){
- 
 		byte[] buffer = new byte[1];
- 
 		if(buttonLED.isChecked())
 			buffer[0]=(byte)1; // button says on, light is on
 		else
