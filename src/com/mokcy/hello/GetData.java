@@ -13,7 +13,7 @@ import com.mokcy.hello.RestClient.RequestMethod;
 
 public class GetData extends Activity implements Runnable {
 	TextView vshow;
-	String url = "http://api.phodal.com/api/v1/";
+	String url = "http://api.phodal.com/api/v1/1/?format=json";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
