@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="app_name">Stay at Home</string>
+    <string name="hello_world">Hello worlds!</string>
+    <string name="menu_settings">设置</string>
+    <string name="title_activity_main">Stay at Home</string>
+	<string name="main_title">Tetee</string>
+	<string name="dataGetButton">dataGetButton</string>
+
+	<string name="about_text">afaslkfjsalfjaslkfjasl;fjkl;vksjziosyweoitw</string>
+	<string name="about_title">test for new about</string>
+	<string name="about_button">test for about button</string>
+	
+	<string name="settings_lable">设置</string>
+	
+	<string name="getdata_title">Get data title</string>
+	<string name="get_data">Get Data</string>
+	<string name="getdata_text">GET DATA TEXT</string>
+	<string name="shello">Say Hello to the </string>
+	
+	<string name="showdata_text">showdta text</string>
+	
+	<string name="dataView_title">dataView</string>
+    <string name="led_on">LED On</string>
+    <string name="led_off">LED Off</string>
+    <string name="ToggleButton">ToggleButton</string>
+    <string name="viewTemp_title">View Temp</string>
+</resources>
