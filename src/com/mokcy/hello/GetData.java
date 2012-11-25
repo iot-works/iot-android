@@ -13,7 +13,7 @@ import com.mokcy.hello.RestClient.RequestMethod;
 
 public class GetData extends Activity implements Runnable {
 	TextView vshow;
-	String url = "http://api.phodal.com/api/v1/1/?format=json";
+	String url = "http://api.phodal.com/api/v1/1/";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class GetData extends Activity implements Runnable {
 
 		vshow = (TextView) this.findViewById(R.id.get_data);
 		vshow.setMovementMethod(ScrollingMovementMethod.getInstance());
-		String tUrl = "http://api.phodal.com/api/v1/";
+		String tUrl = "http://api.phodal.com/api/v1/1/";
 		RestClient client = new RestClient(tUrl);
 		//client.addBasicAuthentication(username, password);
 		try {
