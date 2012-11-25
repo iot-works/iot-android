@@ -41,10 +41,19 @@ public class MainActivity extends Activity {
 				callViewTemp();
 			}
 		});        
-              
+        Button ledButton=(Button) findViewById(R.id.led_button);
+        ledButton.setOnClickListener(new View.OnClickListener(){	
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				callLedCon();
+			}
+		});               
     }
 
-    @Override
+
+
+	@Override
     public boolean onCreateOptionsMenu(Menu menu) {   
         return super.onCreateOptionsMenu(menu);
     }
@@ -60,8 +69,12 @@ public class MainActivity extends Activity {
     } 
 
     public void callViewTemp(){
-    	Intent start=new Intent(MainActivity.this,dataActivity.class);
+    	Intent start=new Intent(MainActivity.this,temViewActivity.class);
     	startActivity(start);
     } 	   
-
+    protected void callLedCon() {
+		Intent callled=new Intent(MainActivity.this,ledCon.class);
+		startActivity(callled);
+		
+	}
 }

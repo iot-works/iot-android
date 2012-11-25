@@ -31,9 +31,15 @@
 			android:layout_height="wrap_content"
 			android:text="@string/main_title" />
 		<Button
+		    android:id="@+id/led_button"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/led_button" />			
+		<Button
 		    android:id="@+id/viewTemp_button"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="@string/viewTemp_title" />		
+			android:text="@string/viewTemp_title" />
+			
 	</LinearLayout>
 </LinearLayout>

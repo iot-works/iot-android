@@ -27,4 +27,6 @@
     <string name="viewTemp_title">查看温度</string>
     
     <string name="tem_title">当前状态</string>
+    
+    <string name="led_button">LED控制示例</string>
 </resources>
