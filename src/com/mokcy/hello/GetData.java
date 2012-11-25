@@ -27,44 +27,54 @@ public class GetData extends Activity implements Runnable {
 		vshow.setMovementMethod(ScrollingMovementMethod.getInstance());
 		String tUrl = "http://api.phodal.com/api/v1/1/";
 		RestClient client = new RestClient(tUrl);
-		//client.addBasicAuthentication(username, password);
+		// client.addBasicAuthentication(username, password);
 		try {
-		    client.Execute(RequestMethod.GET);
-		    if (client.getResponseCode() != 200) {
-		        //return server error
-		        vshow.setText(client.getErrorMessage());
-		    }
-		    //return valid data
-		    JSONObject jObj = new JSONObject(client.getResponse());
-		    vshow.setText(jObj.toString());
-		    
-		    GsonBuilder gsonb=new GsonBuilder();
-		    Gson gson=gsonb.create();
-            //Json中的日期表达方式没有办法直接转换成我们的Date类型, 因此需要单独注册一个Date的反序列化类.
-            //DateDeserializer ds = new DateDeserializer();
-            //给GsonBuilder方法单独指定Date类型的反序列化方法
-			// gsonb.registerTypeAdapter(Date.class, ds);		    
-		    typePhoData phoData=gson.fromJson(jObj.toString(),typePhoData.class);
-		    ((TextView) findViewById(R.id.led)).setText(String.valueOf(phoData.led));
-            ((TextView) findViewById(R.id.title)).setText(phoData.title);
-            ((TextView) findViewById(R.id.temperature)).setText(String.valueOf(phoData.temperature));
-            ((TextView) findViewById(R.id.more)).setText(phoData.more);
-        	
-            RestClient clientPost=new RestClient(url);
-            clientPost.AddParam("temperature","23.1");
-            clientPost.AddParam("led","true");
-            clientPost.AddParam("title","from android");
-            clientPost.AddParam("more", "nEW tESET");
-            try{
-            	clientPost.Execute(RequestMethod.POST);
-            	String response=client.getResponse();
-            	vshow.setText(response.toString());
-            }catch(Exception e){
-            	vshow.setText(e.toString());
-            }
-		} catch(Exception e) {
-		    vshow.setText(e.toString());
+			client.Execute(RequestMethod.GET);
+			if (client.getResponseCode() != 200) {
+				// return server error
+				vshow.setText(client.getErrorMessage());
+			}
+			// return valid data
+			JSONObject jObj = new JSONObject(client.getResponse());
+			vshow.setText(jObj.toString());
+
+			GsonBuilder gsonb = new GsonBuilder();
+			Gson gson = gsonb.create();
+			// Json中的日期表达方式没有办法直接转换成我们的Date类型, 因此需要单独注册一个Date的反序列化类.
+			// DateDeserializer ds = new DateDeserializer();
+			// 给GsonBuilder方法单独指定Date类型的反序列化方法
+			// gsonb.registerTypeAdapter(Date.class, ds);
+			typePhoData phoData = gson.fromJson(jObj.toString(),
+					typePhoData.class);
+			((TextView) findViewById(R.id.led)).setText(String
+					.valueOf(phoData.led));
+			((TextView) findViewById(R.id.title)).setText(phoData.title);
+			((TextView) findViewById(R.id.temperature)).setText(String
+					.valueOf(phoData.temperature));
+			((TextView) findViewById(R.id.more)).setText(phoData.more);
+
+		} catch (Exception e) {
+			vshow.setText(e.toString());
 		}
+
+		String texts="Test frow";
+		vshow.setText(texts);
+		RestClient clientPost = new RestClient(url);
+		clientPost.AddParam("temperature", "23.1");
+		clientPost.AddParam("led", "true");
+		clientPost.AddParam("title", "from android");
+		clientPost.AddParam("more", "nEW tESET");
+		try {
+			clientPost.Execute(RequestMethod.POST);
+			if(client.getResponseCode()!=200){
+				vshow.setText(clientPost.getErrorMessage());
+			}
+			String response2 = clientPost.getResponse();
+			vshow.setText(response2.toString());
+		} catch (Exception e) {
+			vshow.setText(e.toString());
+		}
+
 	}
 	public class typePhoData{
 		public boolean led;
