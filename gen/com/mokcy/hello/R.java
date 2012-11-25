@@ -20,20 +20,20 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int about_button=0x7f090001;
+        public static final int about_button=0x7f090004;
         public static final int about_content=0x7f090000;
         public static final int get_data=0x7f090005;
-        public static final int getdata_button=0x7f090002;
+        public static final int getdata_button=0x7f090001;
         public static final int led=0x7f090007;
         public static final int led_Con=0x7f09000c;
-        public static final int led_button=0x7f090003;
+        public static final int led_button=0x7f090002;
         public static final int menu_settings=0x7f09000d;
         public static final int more=0x7f090009;
         public static final int relativeLayout1=0x7f09000a;
         public static final int temperature=0x7f090008;
         public static final int title=0x7f090006;
         public static final int toggleButtonLED=0x7f09000b;
-        public static final int viewTemp_button=0x7f090004;
+        public static final int viewTemp_button=0x7f090003;
     }
     public static final class layout {
         public static final int about=0x7f030000;

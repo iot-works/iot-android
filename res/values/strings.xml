@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Stay at Home</string>
+    <string name="app_name">Home Anywhere</string>
     <string name="hello_world">Welcome~~</string>
     <string name="menu_settings">设置</string>
     <string name="title_activity_main">Stay at Home</string>

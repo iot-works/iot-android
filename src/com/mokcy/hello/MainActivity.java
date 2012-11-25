@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
 
 public class MainActivity extends Activity {
 	TextView tv1;
@@ -77,4 +80,13 @@ public class MainActivity extends Activity {
 		startActivity(callled);
 		
 	}
+    public void syncData(){
+	    AsyncHttpClient client=new AsyncHttpClient();
+	    client.get("http://api.phodal.com/api/v1", new AsyncHttpResponseHandler(){
+	    	@Override
+	    	public void onSuccess(String response){
+	    		System.out.println(response);
+	    	}
+	    });
+    }
 }
