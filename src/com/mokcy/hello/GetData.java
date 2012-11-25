@@ -25,7 +25,7 @@ public class GetData extends Activity implements Runnable {
 
 		vshow = (TextView) this.findViewById(R.id.get_data);
 		vshow.setMovementMethod(ScrollingMovementMethod.getInstance());
-		String tUrl = "http://api.phodal.com/api/v1/1/";
+		String tUrl = "http://api.phodal.com/api/v1/";
 		RestClient client = new RestClient(tUrl);
 		//client.addBasicAuthentication(username, password);
 		try {
@@ -50,7 +50,7 @@ public class GetData extends Activity implements Runnable {
             ((TextView) findViewById(R.id.temperature)).setText(String.valueOf(phoData.temperature));
             ((TextView) findViewById(R.id.more)).setText(phoData.more);
         	
-            RestClient clientPost=new RestClient(tUrl);
+            RestClient clientPost=new RestClient(url);
             clientPost.AddParam("temperature","23.1");
             clientPost.AddParam("led","true");
             clientPost.AddParam("title","from android");
