@@ -36,4 +36,4 @@
         android:id="@+id/id1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
-</LinearLayout><!-- From: file:/home/phodal/osiot/iot/android/app/src/main/res/layout/getdata.xml -->
+</LinearLayout><!-- From: file:/home/phodal/Home-Anywhere/app/src/main/res/layout/getdata.xml -->

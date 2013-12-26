@@ -17,7 +17,7 @@ public class GetData extends Activity {
 	TextView vshow;
 	String url = "http://api.phodal.com/api/v1/1/";
 
-	@Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
                 .detectDiskReads()
@@ -49,47 +49,34 @@ public class GetData extends Activity {
             JSONObject jObj=jArray.getJSONObject(0);
 			vshow.setText(jObj.toString());
 
-			GsonBuilder gsonb = new GsonBuilder();
-			Gson gson = gsonb.create();
-
-			typePhoData phoData = gson.fromJson(jObj.toString(),
-                    typePhoData.class);
-
-			((TextView) findViewById(R.id.led1)).setText(String
-					.valueOf(phoData.led1));
-			((TextView) findViewById(R.id.sensors1)).setText(String
-                    .valueOf(phoData.sensors1));
-			((TextView) findViewById(R.id.sensors2)).setText(String
-					.valueOf(phoData.sensors2));
-            ((TextView) findViewById(R.id.temperature)).setText(String
-                    .valueOf(phoData.temperature));
-            ((TextView) findViewById(R.id.id1)).setText(String
-                    .valueOf(phoData.id));
+            outputJSON(jObj);
 
 		} catch (Exception e) {
 			vshow.setText(e.toString());
 		}
-        /*
-		String texts="Test frow";
-		vshow.setText(texts);
-		RestClient clientPost = new RestClient(url);
-		clientPost.AddParam("temperature", "23.1");
-		clientPost.AddParam("led", "true");
-		clientPost.AddParam("title", "from android");
-		clientPost.AddParam("more", "nEW tESET");
-		try {
-			clientPost.Execute(RequestMethod.POST);
-			if(client.getResponseCode()!=200){
-				vshow.setText(clientPost.getErrorMessage());
-			}
-			String response2 = clientPost.getResponse();
-			vshow.setText(response2.toString());
-		} catch (Exception e) {
-			vshow.setText(e.toString());
-		}*/
 
 	}
-	public class typePhoData{
+
+    public void outputJSON(JSONObject jObj) {
+        GsonBuilder gsonb = new GsonBuilder();
+        Gson gson = gsonb.create();
+
+        typePhoData phoData = gson.fromJson(jObj.toString(),
+typePhoData.class);
+
+        ((TextView) findViewById(R.id.led1)).setText(String
+                .valueOf(phoData.led1));
+        ((TextView) findViewById(R.id.sensors1)).setText(String
+.valueOf(phoData.sensors1));
+        ((TextView) findViewById(R.id.sensors2)).setText(String
+                .valueOf(phoData.sensors2));
+        ((TextView) findViewById(R.id.temperature)).setText(String
+                .valueOf(phoData.temperature));
+        ((TextView) findViewById(R.id.id1)).setText(String
+                .valueOf(phoData.id));
+    }
+
+    public class typePhoData{
 		public int led1;
 		public double temperature;
         public double sensors1;

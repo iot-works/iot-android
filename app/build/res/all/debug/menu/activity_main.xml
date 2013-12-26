@@ -3,4 +3,4 @@
         android:title="@string/menu_settings"
         android:orderInCategory="100" />
 </menu>
-<!-- From: file:/home/phodal/osiot/iot/android/app/src/main/res/menu/activity_main.xml -->
+<!-- From: file:/home/phodal/Home-Anywhere/app/src/main/res/menu/activity_main.xml -->

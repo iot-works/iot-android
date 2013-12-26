@@ -1,4 +1,4 @@
-<!-- From: file:/home/phodal/osiot/iot/android/app/src/main/AndroidManifest.xml -->
+<!-- From: file:/home/phodal/Home-Anywhere/app/src/main/AndroidManifest.xml -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.mokcy.hello">
 	<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="15"/>
 

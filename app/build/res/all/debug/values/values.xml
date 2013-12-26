@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/home/phodal/osiot/iot/android/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/home/phodal/Home-Anywhere/app/src/main/res/values/dimens.xml -->
     <eat-comment />
 
     <dimen name="padding_large">16dp</dimen>
     <dimen name="padding_medium">8dp</dimen>
     <dimen name="padding_small">8dp</dimen>
-    <!-- From: file:/home/phodal/osiot/iot/android/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/phodal/Home-Anywhere/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
     <string name="ToggleButton">ToggleButton</string>
@@ -32,7 +32,7 @@
     <string name="tem_title">当前状态</string>
     <string name="title_activity_main">Stay at Home</string>
     <string name="viewTemp_title">查看温度</string>
-    <!-- From: file:/home/phodal/osiot/iot/android/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/home/phodal/Home-Anywhere/app/src/main/res/values/styles.xml -->
     <eat-comment />
 
     <style name="AppTheme" parent="android:Theme.Light" />

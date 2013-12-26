@@ -12,4 +12,4 @@
 	android:layout_centerHorizontal="true"
 	android:textSize="50dp"
 	android:onClick="blinkLED"></ToggleButton>
-</RelativeLayout><!-- From: file:/home/phodal/osiot/iot/android/app/src/main/res/layout/data_view.xml -->
+</RelativeLayout><!-- From: file:/home/phodal/Home-Anywhere/app/src/main/res/layout/data_view.xml -->

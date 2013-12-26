@@ -2,10 +2,10 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="/home/phodal/osiot/iot/android/app/src/main/assets" />
+        <source path="/home/phodal/Home-Anywhere/app/src/main/assets" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="/home/phodal/osiot/iot/android/app/src/debug/assets" />
+        <source path="/home/phodal/Home-Anywhere/app/src/debug/assets" />
     </dataSet>
 
 </merger>
