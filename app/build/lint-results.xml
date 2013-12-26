@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 22.3">
+
+    <issue
+        id="OnClick"
+        severity="Error"
+        message="Corresponding method handler &apos;public void blinkLED(android.view.View)&apos; not found"
+        category="Correctness"
+        priority="10"
+        summary="Ensures that `onClick` attribute values refer to real methods"
+        explanation="The `onClick` attribute value should be the name of a method in this View&apos;s context to invoke when the view is clicked. This name must correspond to a public method that takes exactly one parameter of type `View`.
+
+Must be a string value, using &apos;\;&apos; to escape characters such as &apos;\n&apos; or &apos;\uxxxx&apos; for a unicode character."
+        errorLine1=" android:onClick=&quot;blinkLED&quot;>&lt;/ToggleButton>"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/layout/ledview.xml"
+            line="14"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="OnClick"
+        severity="Error"
+        message="Corresponding method handler &apos;public void blinkLED(android.view.View)&apos; not found"
+        category="Correctness"
+        priority="10"
+        summary="Ensures that `onClick` attribute values refer to real methods"
+        explanation="The `onClick` attribute value should be the name of a method in this View&apos;s context to invoke when the view is clicked. This name must correspond to a public method that takes exactly one parameter of type `View`.
+
+Must be a string value, using &apos;\;&apos; to escape characters such as &apos;\n&apos; or &apos;\uxxxx&apos; for a unicode character."
+        errorLine1=" android:onClick=&quot;blinkLED&quot;>&lt;/ToggleButton>"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/layout/ledview.xml"
+            line="14"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Checks that the manifest specifies a targetSdkVersion that is recent"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.
+
+To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        url="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        urls="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1=" &lt;uses-sdk android:minSdkVersion=&quot;4&quot; android:targetSdkVersion=&quot;15&quot; />"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/AndroidManifest.xml"
+            line="4"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Checks that the manifest specifies a targetSdkVersion that is recent"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.
+
+To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        url="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        urls="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1=" &lt;uses-sdk android:minSdkVersion=&quot;4&quot; android:targetSdkVersion=&quot;15&quot; />"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/AndroidManifest.xml"
+            line="4"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;sp&quot; instead of &quot;dp&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Looks for uses of `dp` instead of `sp` dimensions for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.
+
+There *are* cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="http://developer.android.com/training/multiscreen/screendensities.html"
+        urls="http://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1=" android:textSize=&quot;50dp&quot;"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/layout/data_view.xml"
+            line="13"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;sp&quot; instead of &quot;dp&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Looks for uses of `dp` instead of `sp` dimensions for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.
+
+There *are* cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="http://developer.android.com/training/multiscreen/screendensities.html"
+        urls="http://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1=" android:textSize=&quot;50dp&quot;"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/layout/data_view.xml"
+            line="13"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;sp&quot; instead of &quot;dp&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Looks for uses of `dp` instead of `sp` dimensions for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.
+
+There *are* cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="http://developer.android.com/training/multiscreen/screendensities.html"
+        urls="http://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1=" android:textSize=&quot;50dp&quot;"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/layout/ledview.xml"
+            line="13"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;sp&quot; instead of &quot;dp&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Looks for uses of `dp` instead of `sp` dimensions for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.
+
+There *are* cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="http://developer.android.com/training/multiscreen/screendensities.html"
+        urls="http://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1=" android:textSize=&quot;50dp&quot;"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/layout/ledview.xml"
+            line="13"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="AllowBackup"
+        severity="Warning"
+        message="Should explicitly set android:allowBackup to true or false (it&apos;s true by default, and that can have some security implications for the application&apos;s data)"
+        category="Security"
+        priority="3"
+        summary="Ensure that allowBackup is explicitly set in the application&apos;s manifest"
+        explanation="The allowBackup attribute determines if an application&apos;s data can be backed up and restored. It is documented at http://developer.android.com/reference/android/R.attr.html#allowBackup
+
+By default, this flag is set to `true`. When this flag is set to `true`, application data can be backed up and restored by the user using `adb backup` and `adb restore`.
+
+This may have security consequences for an application. `adb backup` allows users who have enabled USB debugging to copy application data off of the device. Once backed up, all application data can be read by the user. `adb restore` allows creation of application data from a source specified by the user. Following a restore, applications should not assume that the data, file permissions, and directory permissions were created by the application itself.
+
+Setting `allowBackup=&quot;false&quot;` opts an application out of both backup and restore.
+
+To fix this warning, decide whether your application should support backup, and explicitly set `android:allowBackup=(true|false)&quot;`"
+        url="http://developer.android.com/reference/android/R.attr.html#allowBackup"
+        urls="http://developer.android.com/reference/android/R.attr.html#allowBackup"
+        errorLine1=" &lt;application android:icon=&quot;@drawable/ic_launcher&quot;"
+        errorLine2=" ^"
+        quickfix="adt">
+        <location
+            file="/home/phodal/android/app/src/main/AndroidManifest.xml"
+            line="7"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="AllowBackup"
+        severity="Warning"
+        message="Should explicitly set android:allowBackup to true or false (it&apos;s true by default, and that can have some security implications for the application&apos;s data)"
+        category="Security"
+        priority="3"
+        summary="Ensure that allowBackup is explicitly set in the application&apos;s manifest"
+        explanation="The allowBackup attribute determines if an application&apos;s data can be backed up and restored. It is documented at http://developer.android.com/reference/android/R.attr.html#allowBackup
+
+By default, this flag is set to `true`. When this flag is set to `true`, application data can be backed up and restored by the user using `adb backup` and `adb restore`.
+
+This may have security consequences for an application. `adb backup` allows users who have enabled USB debugging to copy application data off of the device. Once backed up, all application data can be read by the user. `adb restore` allows creation of application data from a source specified by the user. Following a restore, applications should not assume that the data, file permissions, and directory permissions were created by the application itself.
+
+Setting `allowBackup=&quot;false&quot;` opts an application out of both backup and restore.
+
+To fix this warning, decide whether your application should support backup, and explicitly set `android:allowBackup=(true|false)&quot;`"
+        url="http://developer.android.com/reference/android/R.attr.html#allowBackup"
+        urls="http://developer.android.com/reference/android/R.attr.html#allowBackup"
+        errorLine1=" &lt;application android:icon=&quot;@drawable/ic_launcher&quot;"
+        errorLine2=" ^"
+        quickfix="adt">
+        <location
+            file="/home/phodal/android/app/src/main/AndroidManifest.xml"
+            line="7"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.menu.activity_main appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/home/phodal/android/app/src/main/res/menu/activity_main.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.menu.activity_main appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/home/phodal/android/app/src/main/res/menu/activity_main.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.layout.data_view appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/home/phodal/android/app/src/main/res/layout/data_view.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.layout.data_view appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/home/phodal/android/app/src/main/res/layout/data_view.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.dimen.padding_small appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;padding_small&quot;>8dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/dimens.xml"
+            line="3"
+            column="12"/>
+        <location
+            file="/home/phodal/android/app/src/main/res/values-large/dimens.xml"
+            line="3"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.dimen.padding_small appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;padding_small&quot;>8dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/dimens.xml"
+            line="3"
+            column="12"/>
+        <location
+            file="/home/phodal/android/app/src/main/res/values-large/dimens.xml"
+            line="3"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.dimen.padding_large appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;padding_large&quot;>16dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/dimens.xml"
+            line="5"
+            column="12"/>
+        <location
+            file="/home/phodal/android/app/src/main/res/values-large/dimens.xml"
+            line="5"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.dimen.padding_large appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;padding_large&quot;>16dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/dimens.xml"
+            line="5"
+            column="12"/>
+        <location
+            file="/home/phodal/android/app/src/main/res/values-large/dimens.xml"
+            line="5"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.layout.ledview appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/home/phodal/android/app/src/main/res/layout/ledview.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.layout.ledview appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/home/phodal/android/app/src/main/res/layout/ledview.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.dataGetButton appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;dataGetButton&quot;>dataGetButton&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="8"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.dataGetButton appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;dataGetButton&quot;>dataGetButton&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="8"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.settings_lable appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;settings_lable&quot;>设置&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="14"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.settings_lable appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;settings_lable&quot;>设置&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="14"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.get_data appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;get_data&quot;>Get Data&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="17"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.get_data appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;get_data&quot;>Get Data&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="17"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.getdata_text appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;getdata_text&quot;>GET DATA TEXT&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="18"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.getdata_text appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;getdata_text&quot;>GET DATA TEXT&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="18"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.shello appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;shello&quot;>Say Hello to the &lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="19"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.shello appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;shello&quot;>Say Hello to the &lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="19"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.showdata_text appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;showdata_text&quot;>showdta text&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="21"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.showdata_text appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;showdata_text&quot;>showdta text&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="21"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.led_on appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;led_on&quot;>LED On&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.led_on appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;led_on&quot;>LED On&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.led_off appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;led_off&quot;>LED Off&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="25"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.led_off appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;led_off&quot;>LED Off&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="/home/phodal/android/app/src/main/res/values/strings.xml"
+            line="25"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.layout.tempview appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/home/phodal/android/app/src/main/res/layout/tempview.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.layout.tempview appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/home/phodal/android/app/src/main/res/layout/tempview.xml"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        severity="Warning"
+        message="This LinearLayout layout or its LinearLayout parent is useless"
+        category="Performance"
+        priority="2"
+        summary="Checks whether a parent layout can be removed."
+        explanation="A layout with children that has no siblings, is not a scrollview or a root layout, and does not have a background, can be removed and have its children moved directly into the parent for a flatter and more efficient layout hierarchy."
+        errorLine1=" &lt;LinearLayout "
+        errorLine2=" ^"
+        quickfix="adt">
+        <location
+            file="/home/phodal/android/app/src/main/res/layout/activity_main.xml"
+            line="8"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        severity="Warning"
+        message="This LinearLayout layout or its LinearLayout parent is useless"
+        category="Performance"
+        priority="2"
+        summary="Checks whether a parent layout can be removed."
+        explanation="A layout with children that has no siblings, is not a scrollview or a root layout, and does not have a background, can be removed and have its children moved directly into the parent for a flatter and more efficient layout hierarchy."
+        errorLine1=" &lt;LinearLayout "
+        errorLine2=" ^"
+        quickfix="adt">
+        <location
+            file="/home/phodal/android/app/src/main/res/layout/activity_main.xml"
+            line="8"
+            column="2"/>
+    </issue>
+
+</issues>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/home/phodal/osiot/iot/android/app/src/main/res" >
+            <file
+                name="ic_action_search"
+                path="/home/phodal/osiot/iot/android/app/src/main/res/drawable-hdpi/ic_action_search.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/home/phodal/osiot/iot/android/app/src/main/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/home/phodal/osiot/iot/android/app/src/main/res/drawable-ldpi/ic_launcher.png"
+                qualifiers="ldpi"
+                type="drawable" />
+            <file
+                name="ic_action_search"
+                path="/home/phodal/osiot/iot/android/app/src/main/res/drawable-mdpi/ic_action_search.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/home/phodal/osiot/iot/android/app/src/main/res/drawable-mdpi/ic_launcher.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="activity_main"
+                path="/home/phodal/osiot/iot/android/app/src/main/res/menu/activity_main.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="about"
+                path="/home/phodal/osiot/iot/android/app/src/main/res/layout/about.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="getdata"
+                path="/home/phodal/osiot/iot/android/app/src/main/res/layout/getdata.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="data_view"
+                path="/home/phodal/osiot/iot/android/app/src/main/res/layout/data_view.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_main"
+                path="/home/phodal/osiot/iot/android/app/src/main/res/layout/activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="ic_action_search"
+                path="/home/phodal/osiot/iot/android/app/src/main/res/drawable-xhdpi/ic_action_search.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/home/phodal/osiot/iot/android/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                path="/home/phodal/osiot/iot/android/app/src/main/res/values-large/dimens.xml"
+                qualifiers="large" >
+                <dimen name="padding_small" >8dp
+                </dimen>
+                <dimen name="padding_medium" >16dp
+                </dimen>
+                <dimen name="padding_large" >16dp
+                </dimen>
+            </file>
+            <file
+                path="/home/phodal/osiot/iot/android/app/src/main/res/values/styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="AppTheme"
+                    parent="android:Theme.Light" />
+            </file>
+            <file
+                path="/home/phodal/osiot/iot/android/app/src/main/res/values/strings.xml"
+                qualifiers="" >
+                <string name="getdata_text" >GET DATA TEXT
+                </string>
+                <string name="title_activity_main" >Stay at Home
+                </string>
+                <string name="viewTemp_title" >查看温度
+                </string>
+                <string name="settings_lable" >设置
+                </string>
+                <string name="get_data" >Get Data
+                </string>
+                <string name="getdata_title" >Get data title
+                </string>
+                <string name="tem_title" >当前状态
+                </string>
+                <string name="about_text" >最小物联网系统
+                </string>
+                <string name="led_off" >LED Off
+                </string>
+                <string name="dataView_title" >dataView
+                </string>
+                <string name="about_button" >About
+                </string>
+                <string name="main_title" >获取数据
+                </string>
+                <string name="ToggleButton" >ToggleButton
+                </string>
+                <string name="app_name" >Home Anywhere
+                </string>
+                <string name="led_on" >LED On
+                </string>
+                <string name="dataGetButton" >dataGetButton
+                </string>
+                <string name="hello_world" >Welcome~~
+                </string>
+                <string name="about_title" >test for new about
+                </string>
+                <string name="shello" >Say Hello to the 
+                </string>
+                <string name="menu_settings" >设置
+                </string>
+                <string name="led_button" >LED控制示例
+                </string>
+                <string name="showdata_text" >showdta text
+                </string>
+            </file>
+            <file
+                path="/home/phodal/osiot/iot/android/app/src/main/res/values/dimens.xml"
+                qualifiers="" >
+                <dimen name="padding_medium" >8dp
+                </dimen>
+                <dimen name="padding_small" >8dp
+                </dimen>
+                <dimen name="padding_large" >16dp
+                </dimen>
+            </file>
+        </source>
+        <source path="/home/phodal/osiot/iot/android/app/build/res/rs/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/home/phodal/osiot/iot/android/app/src/debug/res" />
+    </dataSet>
+
+</merger>

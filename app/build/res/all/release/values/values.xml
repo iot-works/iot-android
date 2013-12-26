@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/home/phodal/android/app/src/main/res/values/dimens.xml -->
+    <eat-comment />
+
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <!-- From: file:/home/phodal/android/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="ToggleButton">ToggleButton</string>
+    <string name="about_button">About</string>
+    <string name="about_text">afaslkfjsalfjaslkfjasl;fjkl;vksjziosyweoitw</string>
+    <string name="about_title">test for new about</string>
+    <string name="app_name">Home Anywhere</string>
+    <string name="dataGetButton">dataGetButton</string>
+    <string name="dataView_title">dataView</string>
+    <string name="get_data">Get Data</string>
+    <string name="getdata_text">GET DATA TEXT</string>
+    <string name="getdata_title">Get data title</string>
+    <string name="hello_world">Welcome~~</string>
+    <string name="led_button">LED控制示例</string>
+    <string name="led_off">LED Off</string>
+    <string name="led_on">LED On</string>
+    <string name="main_title">获取数据</string>
+    <string name="menu_settings">设置</string>
+    <string name="settings_lable">设置</string>
+    <string name="shello">Say Hello to the </string>
+    <string name="showdata_text">showdta text</string>
+    <string name="tem_title">当前状态</string>
+    <string name="title_activity_main">Stay at Home</string>
+    <string name="viewTemp_title">查看温度</string>
+    <!-- From: file:/home/phodal/android/app/src/main/res/values/styles.xml -->
+    <eat-comment />
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+
+</resources>
