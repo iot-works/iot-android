@@ -13,7 +13,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mokcy.hello.RestClient.RequestMethod;
 
-public class GetData extends Activity {
+public class GetData extends Activity  {
 	TextView vshow;
 	String url = "http://api.phodal.com/api/v1/1/";
 
