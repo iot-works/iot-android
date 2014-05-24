@@ -9,16 +9,20 @@ import org.json.JSONObject;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.support.v7.app.ActionBarActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-public class GetData extends Activity  {
+public class GetData extends ActionBarActivity {
     TextView vshow;
     String url = "http://b.phodal.com/athome/1/";
 
@@ -53,7 +57,9 @@ public class GetData extends Activity  {
 
             JSONArray jArray = new JSONArray(client.getResponse());
             JSONObject jObj=jArray.getJSONObject(0);
-            vshow.setText(jObj.toString());
+            Toast.makeText(getApplicationContext(),jObj.toString(),
+                    Toast.LENGTH_LONG).show();
+
 
             outputJSON(jObj);
 
@@ -74,6 +80,11 @@ public class GetData extends Activity  {
                 .valueOf(phoData.led1));
         ((TextView) findViewById(R.id.sensors1)).setText(String
                 .valueOf(phoData.sensors1));
+        if(phoData.sensors1 >= 30){
+            String savePhone = "15829384246";
+            Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + savePhone));
+            startActivity(intent);
+        }
         ((TextView) findViewById(R.id.sensors2)).setText(String
                 .valueOf(phoData.sensors2));
         ((TextView) findViewById(R.id.temperature)).setText(String
