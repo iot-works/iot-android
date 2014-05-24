@@ -1,9 +1,12 @@
 package com.phodal.android.athome;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,6 +15,15 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button dataGetButton=(Button) findViewById(R.id.getdata_button);
+        dataGetButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                getData();
+            }
+        });
     }
 
 
@@ -21,6 +33,12 @@ public class MainActivity extends ActionBarActivity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
+    public void getData(){
+        Intent startGet=new Intent(MainActivity.this,GetData.class);
+        startActivity(startGet);
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
