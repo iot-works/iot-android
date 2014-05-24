@@ -20,7 +20,7 @@ import com.google.gson.GsonBuilder;
 
 public class GetData extends Activity  {
     TextView vshow;
-    String url = "http://api.phodal.com/api/v1/1/";
+    String url = "http://b.phodal.com/athome/1/";
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
@@ -43,11 +43,11 @@ public class GetData extends Activity  {
 
         vshow = (TextView) this.findViewById(R.id.get_data);
         vshow.setMovementMethod(ScrollingMovementMethod.getInstance());
-        String tUrl = "http://b.phodal.com/athome/1/";
-        RestClient client = new RestClient(tUrl);
+        RestClient client = new RestClient(url);
         try {
             client.Execute(RestClient.RequestMethod.GET);
             if (client.getResponseCode() != 200) {
+                vshow.setText(R.string.getSuccess);
                 vshow.setText(client.getErrorMessage());
             }
 
@@ -58,7 +58,7 @@ public class GetData extends Activity  {
             outputJSON(jObj);
 
         } catch (Exception e) {
-            vshow.setText(e.toString());
+            vshow.setText(R.string.connectError);
         }
 
     }
@@ -67,8 +67,8 @@ public class GetData extends Activity  {
         GsonBuilder gsonb = new GsonBuilder();
         Gson gson = gsonb.create();
 
-        typePhoData phoData = gson.fromJson(jObj.toString(),
-                typePhoData.class);
+        IOTDataModel phoData = gson.fromJson(jObj.toString(),
+                IOTDataModel.class);
 
         ((TextView) findViewById(R.id.led1)).setText(String
                 .valueOf(phoData.led1));
@@ -82,7 +82,7 @@ public class GetData extends Activity  {
                 .valueOf(phoData.id));
     }
 
-    public class typePhoData{
+    public class IOTDataModel {
         public int led1;
         public double temperature;
         public double sensors1;
