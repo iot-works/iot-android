@@ -4,5 +4,7 @@
     <string name="app_name">Athome</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="getdata_title">title</string>
+    <string name="main_title">获取数据</string>
 
 </resources>
