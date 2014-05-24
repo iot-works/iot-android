@@ -10,6 +10,7 @@ import org.json.JSONObject;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -80,17 +81,19 @@ public class GetData extends ActionBarActivity {
                 .valueOf(phoData.led1));
         ((TextView) findViewById(R.id.sensors1)).setText(String
                 .valueOf(phoData.sensors1));
-        if(phoData.sensors1 >= 30){
-            String savePhone = "15829384246";
-            Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + savePhone));
-            startActivity(intent);
-        }
         ((TextView) findViewById(R.id.sensors2)).setText(String
                 .valueOf(phoData.sensors2));
         ((TextView) findViewById(R.id.temperature)).setText(String
                 .valueOf(phoData.temperature));
         ((TextView) findViewById(R.id.id1)).setText(String
                 .valueOf(phoData.id));
+
+        if(phoData.sensors1 >= 30){
+            SharedPreferences sharedPreferences = this.getSharedPreferences("athome", MODE_WORLD_READABLE);
+            String savePhone = sharedPreferences.getString("telephone", "10086");
+            Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + savePhone));
+            startActivity(intent);
+        }
     }
 
     public class IOTDataModel {
